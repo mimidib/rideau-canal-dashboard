@@ -1,0 +1,193 @@
+/* Grafana-inspired dark theme */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #111217;
+    color: #d8d9da;
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    font-size: 14px;
+}
+
+/* ---- Header ---- */
+.header {
+    background: #181b1f;
+    border-bottom: 1px solid #2c2f33;
+    padding: 12px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.header-logo {
+    font-size: 22px;
+}
+
+.header-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.header-sub {
+    color: #8e9aab;
+    font-size: 13px;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.system-status-label {
+    color: #8e9aab;
+}
+
+.last-updated {
+    color: #8e9aab;
+    font-size: 12px;
+}
+
+/* ---- Main layout ---- */
+.main {
+    padding: 24px;
+}
+
+.section-title {
+    color: #8e9aab;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 12px;
+    margin-top: 24px;
+}
+
+.section-title:first-of-type {
+    margin-top: 0;
+}
+
+/* ---- Location cards ---- */
+.cards-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+.card {
+    background: #181b1f;
+    border: 1px solid #2c2f33;
+    border-radius: 4px;
+    padding: 16px;
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.card-location {
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+
+.metric {
+    background: #111217;
+    border-radius: 4px;
+    padding: 10px 12px;
+}
+
+.metric-label {
+    color: #8e9aab;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 4px;
+}
+
+.metric-value {
+    font-size: 22px;
+    font-weight: 600;
+    color: #fff;
+    line-height: 1;
+}
+
+.metric-unit {
+    color: #8e9aab;
+    font-size: 11px;
+    margin-top: 2px;
+}
+
+/* ---- Safety status badges ---- */
+.badge {
+    font-size: 11px;
+    font-weight: 600;
+    padding: 3px 10px;
+    border-radius: 3px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.badge-safe {
+    background: #1a3a2a;
+    color: #73bf69;
+    border: 1px solid #73bf69;
+}
+
+.badge-caution {
+    background: #3a2f10;
+    color: #f2cc0c;
+    border: 1px solid #f2cc0c;
+}
+
+.badge-unsafe {
+    background: #3a1a1a;
+    color: #f2495c;
+    border: 1px solid #f2495c;
+}
+
+.badge-loading {
+    background: #1f2329;
+    color: #8e9aab;
+    border: 1px solid #2c2f33;
+}
+
+/* ---- Charts ---- */
+.charts-row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+.chart-card {
+    background: #181b1f;
+    border: 1px solid #2c2f33;
+    border-radius: 4px;
+    padding: 16px;
+}
+
+.chart-title {
+    color: #d8d9da;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 12px;
+}

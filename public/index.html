@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rideau Canal Skateway Monitor</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-left">
+            <span class="header-logo">❄</span>
+            <span class="header-title">Rideau Canal Skateway</span>
+            <span class="header-sub">Real-Time Monitoring</span>
+        </div>
+        <div class="header-right">
+            <span class="system-status-label">System Status:</span>
+            <span id="system-status" class="badge badge-loading">Loading...</span>
+            <span id="last-updated" class="last-updated">--</span>
+        </div>
+    </header>
+
+    <main class="main">
+        <!-- Location Cards -->
+        <section class="section-title">Current Conditions</section>
+        <div class="cards-row">
+            <div class="card" id="card-dows-lake">
+                <div class="card-header">
+                    <span class="card-location">Dow's Lake</span>
+                    <span class="badge badge-loading" id="status-dows-lake">--</span>
+                </div>
+                <div class="metrics-grid">
+                    <div class="metric">
+                        <div class="metric-label">Ice Thickness</div>
+                        <div class="metric-value" id="ice-dows-lake">--</div>
+                        <div class="metric-unit">cm</div>
+                    </div>
+                    <div class="metric">
+                        <div class="metric-label">Surface Temp</div>
+                        <div class="metric-value" id="surface-dows-lake">--</div>
+                        <div class="metric-unit">°C</div>
+                    </div>
+                    <div class="metric">
+                        <div class="metric-label">Snow</div>
+                        <div class="metric-value" id="snow-dows-lake">--</div>
+                        <div class="metric-unit">cm</div>
+                    </div>
+                    <div class="metric">
+                        <div class="metric-label">External Temp</div>
+                        <div class="metric-value" id="ext-dows-lake">--</div>
+                        <div class="metric-unit">°C</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" id="card-fifth-avenue">
+                <div class="card-header">
+                    <span class="card-location">Fifth Avenue</span>
+                    <span class="badge badge-loading" id="status-fifth-avenue">--</span>
+                </div>
+                <div class="metrics-grid">
+                    <div class="metric">
+                        <div class="metric-label">Ice Thickness</div>
+                        <div class="metric-value" id="ice-fifth-avenue">--</div>
+                        <div class="metric-unit">cm</div>
+                    </div>
+                    <div class="metric">
+                        <div class="metric-label">Surface Temp</div>
+                        <div class="metric-value" id="surface-fifth-avenue">--</div>
+                        <div class="metric-unit">°C</div>
+                    </div>
+                    <div class="metric">
+                        <div class="metric-label">Snow</div>
+                        <div class="metric-value" id="snow-fifth-avenue">--</div>
+                        <div class="metric-unit">cm</div>
+                    </div>
+                    <div class="metric">
+                        <div class="metric-label">External Temp</div>
+                        <div class="metric-value" id="ext-fifth-avenue">--</div>
+                        <div class="metric-unit">°C</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" id="card-nac">
+                <div class="card-header">
+                    <span class="card-location">NAC</span>
+                    <span class="badge badge-loading" id="status-nac">--</span>
+                </div>
+                <div class="metrics-grid">
+                    <div class="metric">
+                        <div class="metric-label">Ice Thickness</div>
+                        <div class="metric-value" id="ice-nac">--</div>
+                        <div class="metric-unit">cm</div>
+                    </div>
+                    <div class="metric">
+                        <div class="metric-label">Surface Temp</div>
+                        <div class="metric-value" id="surface-nac">--</div>
+                        <div class="metric-unit">°C</div>
+                    </div>
+                    <div class="metric">
+                        <div class="metric-label">Snow</div>
+                        <div class="metric-value" id="snow-nac">--</div>
+                        <div class="metric-unit">cm</div>
+                    </div>
+                    <div class="metric">
+                        <div class="metric-label">External Temp</div>
+                        <div class="metric-value" id="ext-nac">--</div>
+                        <div class="metric-unit">°C</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Charts -->
+        <section class="section-title">Historical Trends — Last Hour</section>
+        <div class="charts-row">
+            <div class="chart-card">
+                <div class="chart-title">Ice Thickness (cm)</div>
+                <canvas id="chart-ice"></canvas>
+            </div>
+            <div class="chart-card">
+                <div class="chart-title">Surface Temperature (°C)</div>
+                <canvas id="chart-surface"></canvas>
+            </div>
+        </div>
+        <div class="charts-row">
+            <div class="chart-card">
+                <div class="chart-title">Snow Accumulation (cm)</div>
+                <canvas id="chart-snow"></canvas>
+            </div>
+            <div class="chart-card">
+                <div class="chart-title">External Temperature (°C)</div>
+                <canvas id="chart-external"></canvas>
+            </div>
+        </div>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
